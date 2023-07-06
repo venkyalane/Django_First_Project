@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        All Members
+    </title>
+  </head>
+  <body align="center">
+    <h1>Members</h1>
+    <li>
+      {% for x in mymembers %}
+        <li>{{ x.firstname }} {{ x.lastname }} {{x.phone}}</li>
+      {% endfor %}
+    </li>
+    </body>
+</html>

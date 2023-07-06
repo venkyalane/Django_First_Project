@@ -1,0 +1,57 @@
+python --version
+pip --version
+pip install django
+django-admin --version
+python -m pip install -U Django
+
+django-admin startproject project_name
+py manage.py runserver
+
+python manage.py migrate
+python manage.py createsuperuser
+py manage.py startapp app_name
+py manage.py makemigrations app_name
+py manage.py migrate
+py manage.py sqlmigrate members 0001 (create model)
+
+##insert data##
+py manage.py shell
+>>>from members.models import Member
+
+>>>member = Member(firstname='Emil', lastname='Refsnes')
+>>>member.save()
+
+>>>Member.objects.all().values()
+
+##insert multiple data##
+>>> member1 = Member(firstname='Tobias', lastname='Refsnes')
+>>> member2 = Member(firstname='Linus', lastname='Refsnes')
+>>> member3 = Member(firstname='Lene', lastname='Refsnes')
+>>> member4 = Member(firstname='Stale', lastname='Refsnes')
+>>> member5 = Member(firstname='Jane', lastname='Doe')
+>>> members_list = [member1, member2, member3, member4, member5]
+>>> for x in members_list:
+>>>   x.save()
+
+##update data##
+>>> from members.models import Member
+>>> x = Member.objects.all()[4]
+>>> x.firstname = "Stalikken"
+>>>x.save()
+
+##delete data##
+>>>x=Member.objects.all()[5]
+>>>x.delete()
+
+##add field in model##
+phone = models.IntegerField(null=True)
+joined_date = models.DateField(null=True)
+py manage.py makemigrations members
+py manage.py migrate
+
+##insert phone and join_date field##
+from members.models import Member
+x = Member.objects.all()[0]
+x.phone = 4578945
+x.joined_date = '2016-12-15'
+x.save()
