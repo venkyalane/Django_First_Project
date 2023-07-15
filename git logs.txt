@@ -1,0 +1,65 @@
+venky@DESKTOP-BPS494F MINGW64 /d/django project/thirddjangoproject
+$ git init
+Initialized empty Git repository in D:/django project/thirddjangoproject/.git/
+
+venky@DESKTOP-BPS494F MINGW64 /d/django project/thirddjangoproject (master)
+$ git add --a
+
+venky@DESKTOP-BPS494F MINGW64 /d/django project/thirddjangoproject (master)
+$ git commit -m "django source code"
+[master (root-commit) cebba27] django source code
+ 33 files changed, 435 insertions(+)
+ create mode 100644 db.sqlite3
+ create mode 100644 django commands.txt
+ create mode 100644 manage.py
+ create mode 100644 members/__init__.py
+ create mode 100644 members/__pycache__/__init__.cpython-311.pyc
+ create mode 100644 members/__pycache__/admin.cpython-311.pyc
+ create mode 100644 members/__pycache__/apps.cpython-311.pyc
+ create mode 100644 members/__pycache__/models.cpython-311.pyc
+ create mode 100644 members/__pycache__/views.cpython-311.pyc
+ create mode 100644 members/admin.py
+ create mode 100644 members/apps.py
+ create mode 100644 members/migrations/0001_initial.py
+ create mode 100644 members/migrations/0002_member_joined_date_member_phone.py
+ create mode 100644 members/migrations/__init__.py
+ create mode 100644 members/migrations/__pycache__/0001_initial.cpython-311.pyc
+ create mode 100644 members/migrations/__pycache__/0002_member_joined_date_member_phone.cpython-311.pyc
+ create mode 100644 members/migrations/__pycache__/__init__.cpython-311.pyc
+ create mode 100644 members/models.py
+ create mode 100644 members/templates/about_us.html
+ create mode 100644 members/templates/all_members.html
+ create mode 100644 members/templates/contact_us.html
+ create mode 100644 members/templates/home.html
+ create mode 100644 members/tests.py
+ create mode 100644 members/views.py
+ create mode 100644 thirddjangoproject/__init__.py
+ create mode 100644 thirddjangoproject/__pycache__/__init__.cpython-311.pyc
+ create mode 100644 thirddjangoproject/__pycache__/settings.cpython-311.pyc
+ create mode 100644 thirddjangoproject/__pycache__/urls.cpython-311.pyc
+ create mode 100644 thirddjangoproject/__pycache__/wsgi.cpython-311.pyc
+ create mode 100644 thirddjangoproject/asgi.py
+ create mode 100644 thirddjangoproject/settings.py
+ create mode 100644 thirddjangoproject/urls.py
+ create mode 100644 thirddjangoproject/wsgi.py
+
+venky@DESKTOP-BPS494F MINGW64 /d/django project/thirddjangoproject (master)
+$ git branch -M main
+
+venky@DESKTOP-BPS494F MINGW64 /d/django project/thirddjangoproject (main)
+$ git remote add origin https://github.com/venkysalane/Django-Second-Project.git
+
+venky@DESKTOP-BPS494F MINGW64 /d/django project/thirddjangoproject (main)
+$ git push -u origin main
+Enumerating objects: 39, done.
+Counting objects: 100% (39/39), done.
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (39/39), 12.29 KiB | 1.75 MiB/s, done.
+Total 39 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/venkysalane/Django-Second-Project.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+venky@DESKTOP-BPS494F MINGW64 /d/django project/thirddjangoproject (main)
+$

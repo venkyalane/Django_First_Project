@@ -8,11 +8,11 @@ django-admin startproject project_name
 py manage.py runserver
 
 python manage.py migrate
-python manage.py createsuperuser
-py manage.py startapp app_name
-py manage.py makemigrations app_name
+python manage.py createsuperuser (create user)
+py manage.py startapp app_name    (create App)
+py manage.py makemigrations app_name  (makemigrations)
 py manage.py migrate
-py manage.py sqlmigrate members 0001 (create model)
+py manage.py sqlmigrate app_name 0001 (create model)
 
 ##insert data##
 py manage.py shell

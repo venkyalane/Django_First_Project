@@ -1,16 +1,20 @@
+{% extends "master.html" %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>
-        All Members
-    </title>
+    <title>All Members</title>
   </head>
-  <body align="center">
+  <body>
+    <div align="center">
+    {% block content %}
     <h1>Members</h1>
-    <li>
-      {% for x in mymembers %}
-        <li>{{ x.firstname }} {{ x.lastname }} {{x.phone}}</li>
-      {% endfor %}
-    </li>
-    </body>
+
+    {% for x in mymembers %}
+      <li>{{forloop.counter}}.<a href="http://127.0.0.1:8000/details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+    <p> Back To<a href="http://127.0.0.1:8000/home/"> Home</a></p>
+    {% endblock %}
+    </div>
+  </body>
 </html>

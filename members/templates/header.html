@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+#logo1 {
+  float: left;
+}
+
+#logo2 {
+  float: right;
+}
+/* Style the header */
+.header {
+  padding: 60px;
+  text-align: center;
+  
+  background: #06b2f7;
+  color: white;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+  color: rgb(255, 0, 212);
+}
+/* change the color of the p element */
+.header p {
+  color: yellow;
+}
+/* image add */
+
+</style>
+<body>
+    <!--Header-->
+    <div class="header">
+      <img id="logo1" src="{% static 'AVSLogo1.png' %}" height="100" width="100" alt="http://127.0.0.1:8000/home/">
+      <img id="logo2" src="{% static 'logo2.png' %}" height="100" width="100" alt="http://127.0.0.1:8000/home/">
+      <h1>AVS ORGANIZATION</h1>
+    </div>
+</body>
+</head>

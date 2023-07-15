@@ -1,18 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>
-      ContactUS
-    </title>
+    <title>ContactUs</title>
   </head>
   <body>
-
+    {% include 'navbar.html' %}
     <h1 align="center">Contact US</h1>
-      
-    <ul align="center">
-      <p>this website developed by <b>Mr.Vyankatesh Alane</b></p>
+    <div align="center">
+      <img src="{% static 'photo.jpg' %}" height="200" width="200" alt="AVS.com">
+      <h2><b>Mr.Vyankatesh Alane</b></h2>
       <p><b>Email: venky@gmail.com</b></p>
-    </ul>
+      <p><b>Facebook:<a href="https://www.facebook.com/venkyalane">Venky Alane</a></b></p>
+      <p><b>Twitter:<a href="https://twitter.com/AlaneVyankatesh">Venky Alane</a></b></p>
+    </div>
+    <p align="left">Back to <a href="http://127.0.0.1:8000/home/">home</a></p>
     
-    </body>
+  </body>
 </html>

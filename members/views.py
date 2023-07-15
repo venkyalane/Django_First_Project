@@ -8,12 +8,13 @@ from members.models import Member
 #     return HttpResponse("<h1 align='center'>Hello world!</h1>")
 
 def home(request):
-    return render(request, "home.html")
+    return render(request, "Home_Page.html")
 
+#data from models (Member)
 def all_members(request):
     mymembers = Member.objects.all().values()
     context={
-        'mymembers' : mymembers
+        'mymembers' : mymembers,
     }
     return render(request, "all_members.html", context)
 
@@ -22,3 +23,21 @@ def about_us(request):
 
 def contact_us(request):
     return render(request, "contact_us.html")
+
+def details(request, id):
+    mymembers = Member.objects.get(id=id)
+    context = {
+        'mymembers' : mymembers
+    }
+    return render(request, "details.html", context)
+
+def main(request):
+    return render(request, "main.html")
+
+def testing(request):
+    context = {
+        'fruits' : ['Apple', 'Banana', 'Cherry'],
+    }
+    return render(request, "template.html", context)
+
+

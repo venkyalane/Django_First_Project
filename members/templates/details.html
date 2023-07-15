@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+      Details about {{ mymembers.firstname }} {{ mymembers.lastname }}
+    {% endblock %}
+    
+  <body> 
+    {% block content %}
+      <p> Following information about {{mymembers.firstname}} {{mymembers.lastname}} </p>
+      <h1>{{ mymembers.firstname }} {{ mymembers.lastname }}</h1>
+  
+      <p>Phone {{ mymembers.phone }}</p>
+      <p>Member since: {{ mymembers.joined_date }}</p>
+  
+      <p>Back to <a href="http://127.0.0.1:8000/all-members/">Members</a></p>
+    {% endblock %}  
+  </body>
+
+</html>

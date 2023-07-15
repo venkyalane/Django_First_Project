@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>All Member Address</title>
+    </head>
+
+    <body align="center">
+        <h1><b>Members</b></h1>
+        {% for x in mymembers %}
+        <table align="center">
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td>{{x.firstname}} {{x.lastname}}</td>
+                <td>{{x.address}}</td>
+        </table>
+        {% endfor %}
+    </body>
+</html>
