@@ -8,12 +8,18 @@
   <body>
     <div align="center">
     {% block content %}
-    <h1>Members</h1>
+    <h1>Employee's</h1>
+    <p>Click on bellow employee name for more information.</p>
 
-    {% for x in mymembers %}
-      <li>{{forloop.counter}}.<a href="http://127.0.0.1:8000/details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
-    {% endfor %}
-    <p> Back To<a href="http://127.0.0.1:8000/home/"> Home</a></p>
+    <tr>
+        <td>
+            {% for x in mymembers %}
+            <li><a href="https://venkyalane.pythonanywhere.com/details/{{ x.employee_id }}">{{ x.firstname }} {{ x.lastname }}</a></li></br>
+            {% endfor %}
+        </td>
+    </tr>
+    </br>
+    <p> Back To<a href="https://venkyalane.pythonanywhere.com/"> Home</a></p>
     {% endblock %}
     </div>
   </body>

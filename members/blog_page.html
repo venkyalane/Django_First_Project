@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogPage</title>
+</head>
+<body align="center">
+    <h1>Here is Python code for <b>Calcute area of Trangle and Rectangle</b></h1>
+    </hr>
+    <p>Simply copy the following code and compile</p>
+    <pre>
+        def trangle_area():
+            base = eval(input("Enter Trangle Base Value: "))
+            height =eval(input("Enetr Trangle Height value:"))
+
+            area = (base * height)/2
+            print("Area of Trangle =", area)
+
+        def rectangle_area():
+            length = eval(input("Enter Rectangle Length: "))
+            width = eval(input("Enetr Rectangle Width: "))
+
+            area = length * width
+            print("Area of Rectange: ", area)
+
+        while True:
+            question = input("Whats area find (Trangle/Rectangle): ")
+            if question == 'Trangle':
+                trangle_area()
+            else:
+                rectangle_area()
+    
+            exit = input("Do you want to exit?(y/n): ")
+    
+            if exit == 'y':
+                break
+    </pre>
+</body>
+</html>

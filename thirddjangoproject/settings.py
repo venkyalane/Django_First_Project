@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'members',
-    'members_address',
+    'product',
 ]
 
 MIDDLEWARE = [
@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'thirddjangoproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_third_project',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST':'localhost',
-        'PORT':'3307',
+        'NAME': 'Venkyalane$avs_db',
+        'USER': 'Venkyalane',
+        'PASSWORD':'Malamahitahe1',
+        'HOST':'Venkyalane.mysql.pythonanywhere-services.com',
+        'PORT':'3306',
     }
 }
 

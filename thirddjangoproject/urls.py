@@ -17,17 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from members import views
-from members_address import views as views1
 
 urlpatterns = [
-    path('', views.main),
     path('admin/', admin.site.urls),
-    path('home/', views.home),
+    path('', views.home),
     path('all-members/', views.all_members),
     path('contact-us/', views.contact_us),
     path('about-us/', views.about_us),
-    path('details/<int:id>/', views.details),
-    path('testing/', views.testing),
-    path('address', views1.all_member),
-    
+    path('details/<int:employee_id>/', views.details),
+    path('news/', views.news),
+    path('blog/', views.blog),
+    path('register/', views.register, name="register"),
+
 ]

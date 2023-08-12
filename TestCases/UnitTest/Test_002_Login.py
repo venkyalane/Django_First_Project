@@ -8,7 +8,7 @@ driver = webdriver.Chrome()
 class Login(unittest.TestCase):
     def setUp(self):
         driver.get("http://127.0.0.1:8000/home/")
-    
+
     def test_002_login(self):
         #Navigate Login Button and click on it
         driver.find_element(By.XPATH, "//a[contains(text(),'Login')]").click()
