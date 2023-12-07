@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     {% block title %}
-      Details about {{ mymembers.firstname }} {{ mymembers.lastname }}
+      {{ mymembers.firstname }} {{ mymembers.lastname }}
     {% endblock %}
 
   <body>
@@ -12,6 +12,7 @@
       <p> Following information about {{mymembers.firstname}} {{mymembers.lastname}} </p>
       <h1>{{ mymembers.firstname }} {{ mymembers.lastname }}</h1>
       <p>Profile: {{mymembers.department}}</p>
+      <p>Address: {{ mymembers.city }}</p>
       <p>Phone: {{ mymembers.phone }}</p>
       <p>Member since: {{ mymembers.joined_date }}</p>
 

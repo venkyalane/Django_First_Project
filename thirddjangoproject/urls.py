@@ -26,7 +26,9 @@ urlpatterns = [
     path('about-us/', views.about_us),
     path('details/<int:employee_id>/', views.details),
     path('news/', views.news),
+    path('entertainment/', views.entertainment),
     path('blog/', views.blog),
     path('register/', views.register, name="register"),
+    path('api/employee/all/', views.EmployeeViews.as_view())
 
 ]

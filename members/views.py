@@ -1,6 +1,11 @@
 from django.shortcuts import render
-from members.models import Employee
 from django.contrib.auth.models import User
+from members.models import Employee
+from members.serializer import EmployeeSer
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
 
 # Create your views here.
@@ -32,6 +37,9 @@ def details(request, employee_id):
 def news(request):
     return render(request, 'news.html')
 
+def entertainment(request):
+    return render(request, 'movies.html')
+
 def blog(request):
     return render(request, 'blog_page.html')
 
@@ -53,3 +61,16 @@ def register(request):
         user = User.objects.create_user(username=e, email='', password=p)
         user.save()
     return render(request, 'register.html')
+
+
+class EmployeeViews(APIView):
+    def get(self, r):
+        accountobj = Employee.objects.all()
+        serobj = EmployeeSer(accountobj, many=True)
+        return Response(serobj.data, status=status.HTTP_200_OK)
+
+    def post(self, r):
+        ser = EmployeeSer(data = r.data)
+        if ser.is_valid():
+            ser.save()
+            return Response(ser.data, status=status.HTTP_201_CREATED)
